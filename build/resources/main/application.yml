@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:stockswiper
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  
+  h2:
+    console:
+      enabled: true
+
+alphavantage:
+  api-key: 0ZZPH6PNZOFAFMNN
+
+fmp:
+  api-key: ${FMP_API_KEY:demo}
+  base-url: https://financialmodelingprep.com/api/v3
